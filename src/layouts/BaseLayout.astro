@@ -36,26 +36,18 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
   </head>
-  <body class="bg-white text-text min-h-screen flex flex-col">
+  <body class="bg-navy text-white min-h-screen flex flex-col">
     <a href="#main-content" class="skip-nav">Aller au contenu principal</a>
-
-    <header class="py-6" style="background: #1B2B4B;">
-      <div class="max-w-[var(--container-max)] mx-auto px-6 flex items-center justify-center">
-        <a href="https://www.alexandrakalinine.com" class="no-underline" aria-label="Retour à AlexandraKalinine.com">
-          <span class="font-heading text-xl text-gold tracking-wide">The Journey France</span>
-        </a>
-      </div>
-    </header>
 
     <main id="main-content" class="flex-1" tabindex="-1">
       <slot />
     </main>
 
-    <footer class="py-8 bg-cream border-t border-sand">
-      <div class="max-w-[var(--container-max)] mx-auto px-6 text-center text-sm text-text-light">
+    <footer class="py-6 bg-navy border-t border-white/10">
+      <div class="max-w-[1600px] mx-auto px-6 text-center text-sm text-white/60">
         <p>
           &copy; {new Date().getFullYear()} Alexandra Kalinine —
-          <a href="https://www.alexandrakalinine.com">AlexandraKalinine.com</a>
+          <a href="https://www.alexandrakalinine.com" class="text-gold-light hover:text-gold">AlexandraKalinine.com</a>
         </p>
       </div>
     </footer>

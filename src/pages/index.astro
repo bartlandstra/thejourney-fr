@@ -3,43 +3,45 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="The Journey France – Retour vers soi">
-  <section class="bg-cream py-16 lg:py-24">
-    <div class="max-w-[var(--container-max)] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <section class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
 
-      <!-- Portrait -->
-      <div class="flex justify-center">
-        <img
-          src="/images/alexandra-kalinine-portrait.jpg"
-          alt="Alexandra Kalinine"
-          width="683"
-          height="1024"
-          class="rounded-lg shadow-md w-full max-w-[360px] h-auto"
-        />
+    <!-- Portrait — moitié gauche, plein cadre -->
+    <div class="relative min-h-[60vh] lg:min-h-screen">
+      <img
+        src="/images/alexandra-kalinine-portrait.jpg"
+        alt="Alexandra Kalinine"
+        width="683"
+        height="1024"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Moitié droite : texte + couverture du livre -->
+    <div class="grid grid-cols-1 sm:grid-cols-[1.3fr_1fr] items-center bg-navy">
+      <div class="px-8 sm:px-12 py-12 lg:py-0">
+        <h1 class="font-heading text-3xl lg:text-4xl text-white font-bold mb-6">
+          Bonjour,
+        </h1>
+        <p class="text-white/85 leading-relaxed mb-5">
+          Je m’appelle Alexandra Kalinine. Pendant de nombreuses années, j’ai travaillé avec la méthode du Voyage de Guérison de Brandon Bays. Depuis 2020, je travaille comme thérapeute en intégrant les approches de Gabor Maté et Thomas Hübl. Si vous souhaitez en savoir plus sur mon travail, je vous invite à visiter mon site web&nbsp;:
+          <a href="https://www.alexandrakalinine.com" target="_blank" rel="noopener" class="text-gold-light hover:text-gold">AlexandraKalinine.com</a>.
+        </p>
+        <p class="text-white/85 leading-relaxed">
+          Pour plus d’informations sur le Voyage de Guérison de Brandon Bays, je vous renvoie vers le site international de
+          <a href="https://home.thejourney.com" target="_blank" rel="noopener" class="text-gold-light hover:text-gold">The Journey</a>.
+        </p>
       </div>
 
-      <!-- Texte -->
-      <div>
-        <h1 class="font-heading text-3xl lg:text-4xl text-navy mb-6">
-          <strong>Bonjour</strong>,
-        </h1>
-        <p class="text-text leading-relaxed mb-4">
-          Je m’appelle Alexandra Kalinine. Pendant de nombreuses années, j’ai travaillé avec la méthode du Voyage de Guérison de Brandon Bays. Depuis 2020, je travaille comme thérapeute en intégrant les approches de Gabor Maté et Thomas Hübl. Si vous souhaitez en savoir plus sur mon travail, je vous invite à visiter mon site web&nbsp;:
-          <a href="https://www.alexandrakalinine.com" target="_blank" rel="noopener">AlexandraKalinine.com</a>.
-        </p>
-        <p class="text-text leading-relaxed mb-8">
-          Pour plus d’informations sur le Voyage de Guérison de Brandon Bays, je vous renvoie vers le site international de
-          <a href="https://home.thejourney.com" target="_blank" rel="noopener">The Journey</a>.
-        </p>
-
+      <div class="relative h-full min-h-[40vh] sm:min-h-screen">
         <img
           src="/images/the-journey-book.jpg"
-          alt=""
+          alt="Le Voyage de Guérison, de Brandon Bays"
           width="313"
           height="500"
-          class="w-[160px] h-auto rounded shadow-sm"
+          class="absolute inset-0 w-full h-full object-cover"
         />
       </div>
-
     </div>
+
   </section>
 </BaseLayout>
