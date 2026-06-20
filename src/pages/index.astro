@@ -3,45 +3,187 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="The Journey France – Retour vers soi">
-  <section class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
 
-    <!-- Portrait — moitié gauche, plein cadre -->
-    <div class="relative min-h-[60vh] lg:min-h-screen">
-      <img
-        src="/images/alexandra-kalinine-portrait.jpg"
-        alt="Alexandra Kalinine"
-        width="683"
-        height="1024"
-        class="absolute inset-0 w-full h-full object-cover"
-      />
-    </div>
+  <!-- HERO: Split, navy bg -->
+  <section class="bg-navy">
+    <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-57px)]">
 
-    <!-- Moitié droite : texte + couverture du livre -->
-    <div class="grid grid-cols-1 sm:grid-cols-[1.3fr_1fr] items-center bg-navy">
-      <div class="px-8 sm:px-12 py-12 lg:py-0">
-        <h1 class="font-heading text-3xl lg:text-4xl text-white font-bold mb-6">
-          Bonjour,
-        </h1>
-        <p class="text-white/85 leading-relaxed mb-5">
-          Je m’appelle Alexandra Kalinine. Pendant de nombreuses années, j’ai travaillé avec la méthode du Voyage de Guérison de Brandon Bays. Depuis 2020, je travaille comme thérapeute en intégrant les approches de Gabor Maté et Thomas Hübl. Si vous souhaitez en savoir plus sur mon travail, je vous invite à visiter mon site web&nbsp;:
-          <a href="https://www.alexandrakalinine.com" target="_blank" rel="noopener" class="text-gold-light hover:text-gold">AlexandraKalinine.com</a>.
-        </p>
-        <p class="text-white/85 leading-relaxed">
-          Pour plus d’informations sur le Voyage de Guérison de Brandon Bays, je vous renvoie vers le site international de
-          <a href="https://home.thejourney.com" target="_blank" rel="noopener" class="text-gold-light hover:text-gold">The Journey</a>.
-        </p>
-      </div>
-
-      <div class="relative h-full min-h-[40vh] sm:min-h-screen">
+      <!-- Gauche : portrait plein cadre -->
+      <div class="relative min-h-[60vh] lg:min-h-0">
         <img
-          src="/images/the-journey-book.jpg"
-          alt="Le Voyage de Guérison, de Brandon Bays"
-          width="313"
-          height="500"
-          class="absolute inset-0 w-full h-full object-cover"
+          src="/images/alexandra-kalinine-portrait.jpg"
+          alt="Alexandra Kalinine"
+          class="absolute inset-0 w-full h-full object-cover object-top"
+          loading="eager"
         />
       </div>
-    </div>
 
+      <!-- Droite : texte -->
+      <div class="flex flex-col justify-center py-16 lg:py-20 px-8 lg:px-16">
+        <p class="text-gold text-xs uppercase tracking-widest mb-6">
+          The Journey France
+        </p>
+        <h1 class="font-heading text-5xl md:text-6xl text-white leading-tight mb-8">
+          Retour<br />vers soi
+        </h1>
+        <p class="text-white leading-relaxed mb-4" style="opacity: 0.85; font-size: 15px;">
+          Je m'appelle Alexandra Kalinine. Pendant de nombreuses années,
+          j'ai accompagné des personnes avec la méthode du Voyage de Guérison
+          de Brandon Bays.
+        </p>
+        <p class="text-white leading-relaxed mb-10" style="opacity: 0.85; font-size: 15px;">
+          Depuis 2020, j'intègre également les approches de Gabor Maté et
+          Thomas Hübl dans mon travail thérapeutique, en ligne et à Leiden.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="https://www.alexandrakalinine.com"
+            target="_blank"
+            rel="noopener"
+            class="inline-block bg-gold text-navy font-medium text-sm px-6 py-3 rounded no-underline hover:bg-gold-dark transition-colors text-center"
+          >
+            Travailler avec Alexandra
+          </a>
+          <a
+            href="https://home.thejourney.com"
+            target="_blank"
+            rel="noopener"
+            class="inline-block border border-gold text-gold font-medium text-sm px-6 py-3 rounded no-underline transition-colors text-center"
+            style="background: transparent;"
+            onmouseover="this.style.background='rgba(201,169,110,0.1)'"
+            onmouseout="this.style.background='transparent'"
+          >
+            The Journey International →
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- SECTION 2 : Le Voyage de Guérison (cream bg) -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-heading text-2xl md:text-3xl text-navy text-center mb-4 italic">
+        Le Voyage de Guérison
+      </h2>
+      <div class="h-px w-16 bg-gold mx-auto mb-8"></div>
+      <p class="text-text leading-relaxed mb-5" style="font-size: 15px;">
+        Le Voyage de Guérison est une méthode développée par Brandon Bays,
+        qui permet d'accéder aux mémoires cellulaires stockées dans le corps
+        et d'en libérer les charges émotionnelles profondes. C'est un chemin
+        vers la guérison — physique, émotionnelle et spirituelle.
+      </p>
+      <p class="text-text leading-relaxed mb-8" style="font-size: 15px;">
+        Cette approche offre un espace sécurisé pour traverser ce qui demande
+        à être regardé, intégré et libéré — à votre rythme, en respectant
+        votre propre sagesse intérieure.
+      </p>
+      <blockquote class="border-l-2 border-gold pl-5 italic text-text-light text-sm leading-relaxed">
+        « La guérison n'est pas un long chemin à parcourir.
+        C'est un retour vers ce que vous avez toujours été. »
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- SECTION 3 : Deux chemins (white bg) -->
+  <section class="py-16 bg-white">
+    <div class="max-w-[var(--container-max)] mx-auto px-6">
+      <h2 class="font-heading text-2xl md:text-3xl text-navy text-center mb-12 italic">
+        Par où aller
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+
+        <!-- Card 1 : Alexandra -->
+        <div class="bg-cream rounded-lg p-8 flex flex-col">
+          <p class="text-gold text-xs uppercase tracking-widest mb-3">
+            Accompagnement individuel
+          </p>
+          <h3 class="font-heading text-xl text-navy mb-3">
+            Travailler avec Alexandra
+          </h3>
+          <p class="text-text-light text-sm leading-relaxed mb-6 flex-1">
+            Alexandra propose des séances individuelles de thérapie
+            émotionnelle, en intégrant The Journey, les approches de
+            Gabor Maté et Thomas Hübl. En ligne et à Leiden.
+          </p>
+          <a
+            href="https://www.alexandrakalinine.com"
+            target="_blank"
+            rel="noopener"
+            class="inline-block bg-gold text-navy font-medium text-sm px-5 py-2.5 rounded no-underline hover:bg-gold-dark transition-colors text-center"
+          >
+            AlexandraKalinine.com
+          </a>
+        </div>
+
+        <!-- Card 2 : The Journey International -->
+        <div class="bg-navy rounded-lg p-8 flex flex-col">
+          <p class="text-gold text-xs uppercase tracking-widest mb-3">
+            La méthode
+          </p>
+          <h3 class="font-heading text-xl text-white mb-3">
+            The Journey International
+          </h3>
+          <p class="text-sm leading-relaxed mb-6 flex-1" style="color: rgba(245,240,235,0.8);">
+            Pour en savoir plus sur le Voyage de Guérison de Brandon Bays,
+            trouver un praticien certifié, ou découvrir les programmes
+            internationaux.
+          </p>
+          <a
+            href="https://home.thejourney.com"
+            target="_blank"
+            rel="noopener"
+            class="inline-block border border-gold text-gold font-medium text-sm px-5 py-2.5 rounded no-underline hover:bg-gold-dark hover:text-navy hover:border-gold-dark transition-colors text-center"
+          >
+            Home.TheJourney.com →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 : Le livre (navy bg) -->
+  <section class="bg-navy py-16">
+    <div class="max-w-[var(--container-max)] mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Texte -->
+        <div>
+          <p class="text-gold text-xs uppercase tracking-widest mb-4">
+            Le livre fondateur
+          </p>
+          <h2 class="font-heading text-3xl text-white mb-6">
+            Le Voyage de Guérison<br />de Brandon Bays
+          </h2>
+          <p class="text-white leading-relaxed mb-5" style="opacity: 0.85; font-size: 15px;">
+            Brandon Bays a développé cette méthode après avoir guéri d'une
+            tumeur de la taille d'un ballon de basket en six semaines, sans
+            chirurgie ni médication. Son livre, traduit dans plus de 30 langues,
+            est le point de départ de ce chemin.
+          </p>
+          <a
+            href="https://home.thejourney.com"
+            target="_blank"
+            rel="noopener"
+            class="inline-block bg-gold text-navy font-medium text-sm px-6 py-3 rounded no-underline hover:bg-gold-dark transition-colors"
+          >
+            Découvrir The Journey
+          </a>
+        </div>
+
+        <!-- Couverture du livre -->
+        <div class="flex justify-center">
+          <img
+            src="/images/the-journey-book.jpg"
+            alt="Le Voyage de Guérison, de Brandon Bays"
+            class="max-h-96 w-auto rounded shadow-lg"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>

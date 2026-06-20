@@ -18,36 +18,70 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-
     <title>{title}</title>
     <meta name="description" content={description} />
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Belleza&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
   </head>
-  <body class="bg-navy text-white min-h-screen flex flex-col">
+  <body class="bg-white text-text min-h-screen flex flex-col">
     <a href="#main-content" class="skip-nav">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header class="bg-white border-b border-sand sticky top-0 z-50">
+      <div class="max-w-[var(--container-max)] mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="font-heading text-navy text-xl no-underline hover:text-gold transition-colors">
+          The Journey France
+        </a>
+        <nav class="flex items-center gap-6">
+          <a
+            href="https://www.alexandrakalinine.com"
+            target="_blank"
+            rel="noopener"
+            class="text-sm text-gold-dark no-underline hover:text-gold transition-colors hidden sm:inline"
+          >
+            AlexandraKalinine.com
+          </a>
+          <a
+            href="https://home.thejourney.com"
+            target="_blank"
+            rel="noopener"
+            class="text-sm text-gold-dark no-underline hover:text-gold transition-colors"
+          >
+            The Journey →
+          </a>
+        </nav>
+      </div>
+    </header>
 
     <main id="main-content" class="flex-1" tabindex="-1">
       <slot />
     </main>
 
-    <footer class="py-6 bg-navy border-t border-white/10">
-      <div class="max-w-[1600px] mx-auto px-6 text-center text-sm text-white/60">
-        <p>
+    <!-- Footer -->
+    <footer class="bg-navy text-white">
+      <div class="max-w-[var(--container-max)] mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p class="text-xs text-white opacity-50">
           &copy; {new Date().getFullYear()} Alexandra Kalinine —
-          <a href="https://www.alexandrakalinine.com" class="text-gold-light hover:text-gold">AlexandraKalinine.com</a>
+          <a href="https://www.alexandrakalinine.com" target="_blank" rel="noopener"
+            class="no-underline hover:text-gold transition-colors opacity-100">
+            AlexandraKalinine.com
+          </a>
+        </p>
+        <p class="text-xs text-white opacity-50">
+          Design by
+          <a href="https://bartlandstra.com" target="_blank" rel="noopener"
+            class="no-underline hover:text-gold transition-colors opacity-100">
+            Bart Landstra
+          </a>
         </p>
       </div>
     </footer>
