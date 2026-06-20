@@ -1,0 +1,63 @@
+---
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "The Journey France — Alexandra Kalinine, thérapeute émotionnelle. Retour vers soi avec le Voyage de Guérison de Brandon Bays.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belleza&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+  </head>
+  <body class="bg-white text-text min-h-screen flex flex-col">
+    <a href="#main-content" class="skip-nav">Aller au contenu principal</a>
+
+    <header class="py-6" style="background: #1B2B4B;">
+      <div class="max-w-[var(--container-max)] mx-auto px-6 flex items-center justify-center">
+        <a href="https://www.alexandrakalinine.com" class="no-underline" aria-label="Retour à AlexandraKalinine.com">
+          <span class="font-heading text-xl text-gold tracking-wide">The Journey France</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main-content" class="flex-1" tabindex="-1">
+      <slot />
+    </main>
+
+    <footer class="py-8 bg-cream border-t border-sand">
+      <div class="max-w-[var(--container-max)] mx-auto px-6 text-center text-sm text-text-light">
+        <p>
+          &copy; {new Date().getFullYear()} Alexandra Kalinine —
+          <a href="https://www.alexandrakalinine.com">AlexandraKalinine.com</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
